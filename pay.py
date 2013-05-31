@@ -1,20 +1,24 @@
-class model:
-    week1hours = 0
-    week2hours = 0
-    payratehours = 23.0
-    overtimeafter = 36
+class grossincome:
+    _payratehours = 23.0
+    _overtimeafter = 40
     _totalhours = 0
+    def __init__(payrate,overtimeafter)
     def totalhours(self, hours):
         if hours > self.overtimeafter:
-            self._totalhours = self._totalhours + (hours - self.overtimeafter)*1.5 + self.overtimeafter
+            _self._totalhours = _self._totalhours + (hours - _self.overtimeafter)*1.5 + _self.overtimeafter
         else:
-            self._totalhours = self._totalhours + hours
+            _self._totalhours = _self._totalhours + hours
             
         
         
     def grosspay(self):
         print self._totalhours*self.payratehours
-    
+
+
+
+
+
+
 
 modela =  model()
 modela.totalhours(11.5*6)
