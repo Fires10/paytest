@@ -24,7 +24,7 @@ class grossincome:
 
 
 
-modela =  model()
+modela =  model(17.29,36)
 modela.totalhours(11.5*6)
 modela.totalhours(11.5*3)
 #modela.totalhours(11.5*2)
