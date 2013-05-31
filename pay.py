@@ -1,5 +1,5 @@
 class grossincome:
-    _payratehours = 23.0
+    _payratehours = 7.25
     _overtimeafter = 40
     _totalhours = 0
     def __init__(payrate,overtimeafter)
@@ -12,7 +12,7 @@ class grossincome:
         
         
     def grosspay(self):
-        print self._totalhours*self.payratehours
+        return self._totalhours*self.payratehours
 
 
 
