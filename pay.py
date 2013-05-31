@@ -2,7 +2,11 @@ class grossincome:
     _payratehours = 7.25
     _overtimeafter = 40
     _totalhours = 0
-    def __init__(payrate,overtimeafter)
+    def __init__(payrate,overtimeafter):
+        
+        _payrate = float(payrate)
+        _overtimeafter = float(overtimeafter)
+        
     def totalhours(self, hours):
         if hours > self.overtimeafter:
             _self._totalhours = _self._totalhours + (hours - _self.overtimeafter)*1.5 + _self.overtimeafter
