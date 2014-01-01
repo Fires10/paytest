@@ -4,11 +4,18 @@ class taxes:
     _grosspay
     _pretaxbenefits
     _taxablepay
+    _taxtable
         
     def __init__(married=0,dependents=0):
          
-         self.married = married
+         self._married = married
          self._dependents = dependents
+         if self._married == 1:
+            with open("married.table", 'r') as lin:
+                self._taxtable = lin.read()
+         else:
+             with open("single.table", 'r') as lin:
+                 self._taxtable = lin.read()
     def pretaxbenefits(ben=0):
         
         self._pretaxbenefits = ben
@@ -29,6 +36,7 @@ class taxes:
         
         
     def federaltax():
+        return "this is insane"
         
         
         
