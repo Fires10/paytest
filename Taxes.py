@@ -28,6 +28,10 @@ class taxes:
         return self.taxablepay() * 0.062
         
         
+    def federaltax():
+        
+        
+        
     
         
     
