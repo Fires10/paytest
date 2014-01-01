@@ -5,6 +5,7 @@ class taxes:
     _pretaxbenefits
     _taxablepay
     _taxtable
+    _withholdingallowance = 151.90
         
     def __init__(married=0,dependents=0):
          
@@ -37,9 +38,10 @@ class taxes:
         
     def federaltax():
         taxline = ''
+        taxpay = self.taxablepay() - self._dependents8
         for line in self._taxtable:
             line = line.split(',')
-            if self._taxablepay() < float(line[0]) && self._taxablepay() < float(line[1]):
+            if self.taxablepay() < float(line[0]) && self.taxablepay() < float(line[1]):
                 taxline = line
         
         fedtax = float(line[2]) + (self.taxablepay() - float(line[0])*float(line[3])
