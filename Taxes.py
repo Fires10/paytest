@@ -36,7 +36,15 @@ class taxes:
         
         
     def federaltax():
-        return "this is insane"
+        taxline = ''
+        for line in self._taxtable:
+            line = line.split(',')
+            if self._taxablepay() < float(line[0]) && self._taxablepay() < float(line[1]):
+                taxline = line
+        
+        fedtax = float(line[2]) + (self.taxablepay() - float(line[0])*float(line[3])
+        return fedtax
+            
         
         
         
